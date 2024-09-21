@@ -1,5 +1,11 @@
 # FizzBuzz Program
 
+Programing test driven, check out the tests and write code step by step so your tests will run successfully.
+Choise your coding language:
+- JAVA
+- python
+- javascript
+
 ## Stage 1
 
 Write a program that prints the numbers from 1 to 100. However, for:
