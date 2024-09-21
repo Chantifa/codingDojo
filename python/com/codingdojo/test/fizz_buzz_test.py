@@ -1,43 +1,47 @@
-import com.codingdojo.solution
-from com.codingdojo.solution.fizz_buzz import capture_output
+from com.codingdojo.code.fizz_buzz import is_fizz, is_buzz, get_fizz_buzz_value, capture_output
+# from com.codingdojo.solution.fizz_buzz import is_fizz, is_buzz, get_fizz_buzz_value
 
+# Standalone tests
+def test_is_fizz():
+    assert is_fizz(3) == True
+    assert is_fizz(6) == True
+    assert is_fizz(4) == False
+    assert is_fizz(5) == False
+    print("test_is_fizz passed")
 
-# Test for FizzBuzz
+def test_is_buzz():
+    assert is_buzz(5) == True
+    assert is_buzz(10) == True
+    assert is_buzz(3) == False
+    assert is_buzz(7) == False
+    print("test_is_buzz passed")
+
+def test_get_fizz_buzz_value():
+    assert get_fizz_buzz_value(3) == "Fizz"
+    assert get_fizz_buzz_value(5) == "Buzz"
+    assert get_fizz_buzz_value(15) == "FizzBuzz"
+    assert get_fizz_buzz_value(7) == "7"
+    print("test_get_fizz_buzz_value passed")
+
 def test_fizz_buzz():
-    output = capture_output(1, 20)
-    assert "FizzBuzz" in output
-    assert output.splitlines()[14] == "FizzBuzz"  # 15 is FizzBuzz
+    expected_output = "\n".join([
+        "1", "2", "Fizz", "4", "Buzz",
+        "Fizz", "7", "8", "Fizz", "Buzz",
+        "11", "Fizz", "13", "14", "FizzBuzz",
+        "16", "17", "Fizz", "19", "Buzz"
+    ]) + "\n"
+
+    actual_output = capture_output(1, 20)
+
+    print("Expected Output:\n", expected_output)
+    print("Actual Output:\n", actual_output)
+
+    assert actual_output == expected_output
     print("test_fizz_buzz passed")
 
-# Test for Fizz
-def test_fizz():
-    output = capture_output(1, 20)
-    fizz_indexes = [2, 5, 8, 11, 17]  # 3, 6, 9, 12, 18 are Fizz
-    for index in fizz_indexes:
-        assert output.splitlines()[index] == "Fizz"
-    print("test_fizz passed")
-
-# Test for Buzz
-def test_buzz():
-    output = capture_output(1, 20)
-    buzz_indexes = [4, 9, 19]  # 5, 10, 20 are Buzz
-    for index in buzz_indexes:
-        assert output.splitlines()[index] == "Buzz"
-    print("test_buzz passed")
-
-# Test for other numbers
-def test_numbers():
-    output = capture_output(1, 20)
-    number_checks = {
-        0: "1", 1: "2", 3: "4", 6: "7", 7: "8", 10: "11", 12: "13", 13: "14", 15: "16", 16: "17", 18: "19"
-    }
-    for index, expected_value in number_checks.items():
-        assert output.splitlines()[index] == expected_value
-    print("test_numbers passed")
-
-# Running all tests
+# Run tests
 if __name__ == '__main__':
+    test_is_fizz()
+    test_is_buzz()
+    test_get_fizz_buzz_value()
     test_fizz_buzz()
-    test_fizz()
-    test_buzz()
-    test_numbers()

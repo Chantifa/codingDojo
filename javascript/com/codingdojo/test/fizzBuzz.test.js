@@ -1,4 +1,5 @@
-const { fizzBuzz, getFizz, getBuzz, getFizzBuzz, getNumber } = require('../solution/fizz_buzz');
+const { fizzBuzz, getFizz, getBuzz, getFizzBuzz, getNumber } = require('../code/fizz_buzz');
+//const { fizzBuzz, getFizz, getBuzz, getFizzBuzz, getNumber } = require('../solution/fizz_buzz');
 
 // Test for Fizz
 test('getFizz: returns "Fizz" for multiples of 3', () => {

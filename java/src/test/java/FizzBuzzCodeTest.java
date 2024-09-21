@@ -8,11 +8,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-public class FizzBuzzTest {
+public class FizzBuzzCodeTest {
 
     @InjectMocks
-    // private FizzBuzz fizzBuzz;
-    private FizzBuzzCode fizzBuzz;
+    private FizzBuzzCode fizzBuzz;  // Inject the mocked PrintService into FizzBuzz
+
 
     @Test
     public void testIsFizz() {
