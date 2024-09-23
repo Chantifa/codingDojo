@@ -1,5 +1,5 @@
-#from com.codingdojo.code.fizz_buzz import is_fizz, is_buzz, get_fizz_buzz_value, capture_output
-from com.codingdojo.solution.fizz_buzz import is_fizz, is_buzz, get_fizz_buzz_value, capture_output
+from com.codingdojo.code.fizz_buzz import is_fizz, is_buzz, get_fizz_buzz_value, capture_output
+# from com.codingdojo.solution.fizz_buzz import is_fizz, is_buzz, get_fizz_buzz_value, capture_output
 # Tests
 def test_is_fizz():
     assert is_fizz(3) == True
